@@ -5,7 +5,6 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
-import javax.faces.context.SessionMap;
 import javax.faces.validator.ValidatorException;
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -17,7 +16,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 @ManagedBean
-@SessionMap
 @SessionScoped
 public class userBean {
     private String firstname;

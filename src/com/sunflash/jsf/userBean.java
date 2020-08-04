@@ -37,6 +37,7 @@ public class userBean {
             e.printStackTrace();
         }
     }
+
     public String getFirstname() {
         return firstname;
     }

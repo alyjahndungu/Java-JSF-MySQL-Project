@@ -97,9 +97,11 @@ public class userBean {
     public void validateEmail(FacesContext context, UIComponent toValidate, Object value) throws ValidatorException {
         String emailStr = (String) value;
         if (-1 == emailStr.indexOf("@")) {
+
             FacesMessage message = new FacesMessage("Email Address is Valid");
             throw new ValidatorException(message);
         }
+
     }
 
     //Validate Sign up process

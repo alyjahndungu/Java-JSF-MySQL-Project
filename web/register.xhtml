@@ -1,1 +1,79 @@
 
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+    <title>Patient System</title>
+</h:head>
+
+<h:body>
+    <h:form>
+        <h2>Patient System - Create Account</h2>
+        <table>
+            <tr>
+                <td>Firstname:</td>
+                <td>
+                    <h:inputText label="Firstname"
+                                 id="firstname" value="#{userBean.firstname}"
+                                 required="true"/>
+                    <h:message for="firstname" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Lastname:</td>
+                <td>
+                    <h:inputText label="Lastname"
+                                 id="lastname" value="#{userBean.lastname}"
+                                 required="true"/>
+                    <h:message for="lastname" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Username:</td>
+                <td>
+                    <h:inputText label="Username"
+                                 id="username" value="#{userBean.username}"
+                                 required="true"/>
+                    <h:message for="username" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Email Address:</td>
+                <td>
+                    <h:inputText label="Email Address"
+                                 id="email" value="#{userBean.emailAddress}" required="true"
+                                 validator="#{userBean.validateEmail}"/>
+                    <h:message for="email" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <h:selectOneRadio label="Gender"
+                                      id="gender" value="#{userBean.gender}" required="true">
+                        <f:selectItem itemLabel="Male" itemValue="male" />
+                        <f:selectItem itemLabel="Female" itemValue="female" />
+                    </h:selectOneRadio>
+                    <h:message for="gender" style="color: red"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <h:outputText value="Password"/>
+                    <h:inputSecret id="password" value="#{userBean.userpwd}" required="true"> </h:inputSecret>
+                    <h:message for="password"></h:message>
+                </td>
+            </tr>
+
+        </table>
+        <p><h:commandButton value="Sign Up" action="#{userBean.registerNewUser}" /></p>
+    </h:form>
+</h:body>
+</html>

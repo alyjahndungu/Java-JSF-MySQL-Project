@@ -3,5 +3,4 @@
     <Resource name="jdbc/database" auth="Container" type="javax.sql.DataSource"
               username="turnstone" password="password" driverClassName="com.mysql.jdbc.Driver"
               url="jdbc:mysql://localhost:3306/hospitaldb"/>
-
 </Context>

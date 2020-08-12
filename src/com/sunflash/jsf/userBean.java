@@ -180,7 +180,6 @@ public class userBean {
                 }catch (SQLException sq){
                     sq.printStackTrace();
                 }
-
             }
         }
     }
